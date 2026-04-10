@@ -1,0 +1,13 @@
+<div id="app">
+    <input v-model="name" placeholder="輸入你的名字" />
+    <p>你好，{{ name }}！</p>
+  </div>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+  Vue.createApp({
+    data() {
+      return { name: "" }
+    }
+  }).mount("#app")
+  </script>
+  
