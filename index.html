@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>Vue 3 基礎練習控制台</title>
+    <style>
+        :root {
+            --sidebar-width: 320px;
+            --vue-green: #42b883;
+            --vue-blue: #35495e;
+            --bg-light: #f8f9fa;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+            background-color: var(--bg-light);
+        }
+        /* 左側選單 */
+        .sidebar {
+            width: var(--sidebar-width);
+            background: white;
+            border-right: 1px solid #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+            z-index: 10;
+        }
+        .sidebar-header {
+            padding: 20px;
+            background: var(--vue-blue);
+            color: white;
+        }
+        .student-info {
+            font-size: 0.9em;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        .nav-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            overflow-y: auto;
+            flex: 1;
+        }
+        .nav-item a {
+            display: block;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: #444;
+            border-bottom: 1px solid #f0f0f0;
+            transition: all 0.2s;
+            font-weight: 500;
+        }
+        .nav-item a:hover {
+            background-color: #f0fff4;
+            color: var(--vue-green);
+            padding-left: 25px;
+        }
+        .emoji { margin-right: 10px; }
+
+        /* 右側內容區 */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: #eee;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: white;
+        }
+        .placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: #888;
+            flex-direction: column;
+        }
+        .placeholder-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h1>Vue.js 範例展示</h1>
+            <div class="student-info">學號：413730788 林絜忻</div>
+        </div>
+        <nav class="nav-list">
+            <div class="nav-item"><a href="ex1/index.html" target="content-frame"><span class="emoji">🚀</span>範例 1：基本資料綁定</a></div>
+            <div class="nav-item"><a href="ex2/index.html" target="content-frame"><span class="emoji">👤</span>範例 2：多個資料屬性</a></div>
+            <div class="nav-item"><a href="ex3/index.html" target="content-frame"><span class="emoji">🖱️</span>範例 3：方法與計數器</a></div>
+            <div class="nav-item"><a href="ex4/index.html" target="content-frame"><span class="emoji">⌨️</span>範例 4：雙向資料綁定</a></div>
+            <div class="nav-item"><a href="ex5/index.html" target="content-frame"><span class="emoji">👁️</span>範例 5：條件渲染</a></div>
+            <div class="nav-item"><a href="ex6/index.html" target="content-frame"><span class="emoji">📜</span>範例 6：列表渲染</a></div>
+            <div class="nav-item"><a href="ex7/index.html" target="content-frame"><span class="emoji">🧮</span>範例 7：計算屬性</a></div>
+            <div class="nav-item"><a href="ex8/index.html" target="content-frame"><span class="emoji">🎨</span>範例 8：樣式與 Class</a></div>
+            <div class="nav-item"><a href="ex9/index.html" target="content-frame"><span class="emoji">📝</span>範例 9：待辦事項清單</a></div>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <iframe name="content-frame" src="ex1/index.html"></iframe>
+    </div>
+</body>
+</html>
